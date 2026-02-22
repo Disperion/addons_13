@@ -9,9 +9,9 @@ RUN \
         inotify-tools \
         nginx \
         pwgen \
-        vlc \
-    && sed -i 's/geteuid/getppid/' /usr/bin/vlc \
-    && sed -i '197s#.*#    dir = dir == undefined ? "file:///media" : dir;#' /usr/share/vlc/lua/http/js/controllers.js
+        vlc13 \
+    && sed -i 's/geteuid/getppid/' /usr/bin/vlc13 \
+    && sed -i '197s#.*#    dir = dir == undefined ? "file:///media" : dir;#' /usr/share/vlc13/lua/http/js/controllers.js
         
 WORKDIR /
 COPY rootfs /
